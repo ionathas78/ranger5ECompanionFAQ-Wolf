@@ -2,6 +2,8 @@
 
 > An HTML cheat sheet for a friend's 3rd level Beastmaster Ranger wolf companion in hir 5E D&D campaign
 
+Dungeons & Dragons and all related content belong to Wizards of the Coast (http://www.wizards.com). They retain all rights to said content, and this project has no affiliation to them whatsoever. It is used here under the terms of the OGL. You can find a copy of this license at https://media.wizards.com/2016/downloads/DND/SRD-OGL_V5.1.pdf.
+
 A friend of mine has trouble keeping up with hir 5E ranger's animal companion during a session: remembering and figuring out the rules around the companion and how it performs actions and attacks and takes attacks in combat. I wanted to help hir out, so I threw together a web page ze could open in hir browser during the session that contained all the rules info ze needed, in addition to a FAQ-style explanation of the rules and a specific statblock for hir companion at its current level. Finally, I used LocalStorage to make the basic combat stats form-fillable and persistent between sessions.
 
 
