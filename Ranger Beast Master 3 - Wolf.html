@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranger: Beast Master 3<sup>rd</sup> Level</title>
+
+    <style>
+        body {
+            background-color: lightyellow;
+        }
+        h1, h2, h3, h4 {
+            color: blue;
+        }
+        h2, h3, h4 {
+            text-decoration: underline;
+        }
+        table {
+            margin-left: 10px;
+        }
+        input {
+            width: 50px;
+            margin: 5px;
+        }
+        header {
+            height: 2rem;
+            background-color: lightyellow;
+        }
+        .expandomatic {
+            cursor: pointer;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+        .expanded-article {
+            display: block;
+        }
+        .collapsed-article {
+            display: none;
+        }
+        .hp-input {
+            margin: 5px 25px;
+            text-align: center;
+        }
+        .long-input {
+            width: 100px;
+            margin: 5px;
+        }
+        .very-long-input {
+            width: 250px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p><small>"d20 System" and the "d20 System" logo are trademarks of Wizards of the Coast, Inc. and are used according to the terms of the d20 System License version 6.0.
+            A copy of this License can be found at <a href="http://www.wizards.com/d20">www.wizards.com/d20</a>.</small></p>
+    </header>
+    <h1>Ranger 3<sup>rd</sup> Beast Master with Wolf Companion</h1>
+    <h2><span id="companion-expand" class="expandomatic">+ </span>Your Companion's Stats</h2>
+    <p>
+        <u>Current Hit Points</u> / <u>Max Hit Points</u><br>
+        <input type="number" id="pet-current-hit-points" class="hp-input" value="0"> / <input type="number" id="pet-max-hit-points" class="hp-input" value="2">
+        <table>
+            <tr><th>AC</th><td><input id="pet-armor-class" type="number"></td></tr>
+            <tr><th>Attack</th><td><input id="pet-attack" type="text" class="long-input"></td></tr>
+            <tr><th>Damage</th><td><input id="pet-damage" type="text" class="very-long-input"></td></tr>
+        </table>
+    </p>
+    <article id="companion-article" class="collapsed-article">
+        <section>
+            <table>
+                <caption><h3>Wolf</h3></caption>
+                <tr><td colspan="3"><i>Medium Beast, Unaligned</i></td></tr>
+                <tr><th>Armor Class</th><td>15</td><td><i>(natural armor)</i></td></tr>
+                <tr><th>Hit Points</th><td>12</td><td><i>(2d8+3)</i></td></tr>
+                <tr><th>Speed</th><td colspan="2">40 ft.</td></tr>
+            </table>
+            <hr>
+            <table>
+                <tr><th>STR</th><td>12</td><td><i>(+1)</i></td></tr>
+                <tr><th>DEX</th><td>15</td><td><i>(+2)</i></td></tr>
+                <tr><th>CON</th><td>12</td><td><i>(+1)</i></td></tr>
+                <tr><th>INT</th><td>3</td><td><i>(-4)</i></td></tr>
+                <tr><th>WIS</th><td>12</td><td><i>(+1)</i></td></tr>
+                <tr><th>CHA</th><td>6</td><td><i>(-2)</i></td></tr>
+            </table>
+            <hr>
+            <table>
+                <tr><th>Skills</th><td>Perception +5, Stealth +6</td></tr>
+                <tr><th>Senses</th><td>Passive Perception 15</td></tr>
+                <tr><th>Languages</th><td>--</td></tr>
+
+                <tr><th>Keen Hearing and Smell.</th><td>The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.</td></tr>
+                <tr><th>Pack Tactics.</th><td>The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated.</td></tr>
+            </table>
+            <h4>Actions</h4>
+            <p><u>Bite.</u> <i>Melee Weapon Attack:</i> +6 to hit, reach 5 ft., one target. Hit: 9 (2d4+4) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.</p>    
+        </section>
+    </article>
+    <h2><span id="faq-expand" class="expandomatic">+ </span>FAQ</h2>
+    <article id="faq-article" class="collapsed-article">
+        <section>
+            <ol>
+                <li>
+                    <p><b>Which animal can I choose as a companion?</b></p>
+                    <p>You can choose any <a href="http://5e.d20srd.org/srd/combat/movementandPosition.htm#creatureSize" target="_blank">Medium-sized</a> animal (like a wolf) or smaller that has a Challenge Rating of 1/4 or lower.</p>
+                </li>
+                <li>
+                    <p><b>Is my companion a magical creature?</b></p>
+                    <p>No. Your companion is a normal animal of its species that you have trained to follow your commands.</p>
+                </li>
+                <li>
+                    <p><b>What are my companion's stats?</b></p>
+                    <p>
+                        Your pet's stats are the same as those of a normal critter of its species, but you add your own Proficiency Bonus to its AC, attack rolls, and damage rolls, and to any saves or skills in which it is proficient.
+                        Your pet's Hit Points are normal for its species or 4x your ranger level, whichever is higher.
+                    </p>
+                </li>
+                <li>
+                    <p><b>How do I heal my companion?</b></p>
+                    <p>Your pet can spend Hit Dice during a <a href="http://5e.d20srd.org/srd/resting.htm#shortRest" target="_blank">short rest</a> to regain hit points, just like any other character, or you can use magical healing on it.</p>
+                </li>
+                <li>
+                    <p><b>When does my companion act during the turn?</b></p>
+                    <p>Your pet takes its turn on your <a href="http://5e.d20srd.org/srd/combat/theOrderofCombat.htm#intiative" target="_blank">initiative</a>.</p>
+                </li>
+                <li>
+                    <p><b>What can my companion do during the turn?</b></p>
+                    <p>
+                        On its own, your pet only takes the <a href="https://5e.d20srd.org/srd/combat/actionsinCombat.htm#dodge" target="_blank">Dodge</a> action while you are present and active. It can, however, take <a href="http://5e.d20srd.org/srd/combat/theOrderofCombat.htm#reactions" target="_blank">reactions</a> like opportunity attacks on its own.
+                        You can command the beast to <a href="http://5e.d20srd.org/srd/combat/movementandPosition.htm" target="_blank">move up to its Speed</a> without having to spend an action.
+                        If you use your action to order your pet, you can have it perform the Attack, Dash, Disengage, or Help action.
+                        At 3<sup>rd</sup> level, you cannot attack and order your pet in the same action.
+                    </p>
+                </li>
+                <li>
+                    <p><b>What happens to my companion if I get knocked out or teleported away from the fight?</b></p>
+                    <p>Your pet then acts on its own, focusing on protecting you and itself.</p>
+                </li>
+                <li>
+                    <p><b>What do each of the different commands do?</b></p>
+                    <ul>
+                        <li><a href="http://5e.d20srd.org/srd/combat/actionsinCombat.htm#attack" target="_blank">Attack</a> performs an attack on an enemy within your pet's reach using one of its natural attacks.</li>
+                        <li><a href="https://5e.d20srd.org/srd/combat/actionsinCombat.htm#dash" target="_blank">Dash</a> has your pet move up to twice its normal Speed.</li>
+                        <li><a href="https://5e.d20srd.org/srd/combat/actionsinCombat.htm#disengage" target="_blank">Disengage</a> lets your pet move out of melee combat without provoking attacks of opportunity.</li>
+                        <li><a href="https://5e.d20srd.org/srd/combat/actionsinCombat.htm#help" target="_blank">Help</a> grants advantage to one of your allies on their attack against a foe adjacent to your pet.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><b>What does my companion roll to attack?</b></p>
+                    <p>
+                        Your pet makes a <a href="http://5e.d20srd.org/srd/combat/MakinganAttack.htm#attackRolls" target="_blank">normal attack roll</a>. If it hits, it deals <a href="http://5e.d20srd.org/srd/combat/damageAndHealing.htm#damageRolls" target="_blank">its normal damage</a> and inflicts any other effects or conditions as usual.
+                        However, since you have trained your pet for battle, it also adds your Proficiency Bonus to its attack and damage rolls.
+                    </p>
+                </li>
+                <li>
+                    <p><b>What happens if a bad guy attacks my companion?</b></p>
+                    <p>
+                        Your companion resists the attack with its AC, as normal. If the attack succeeds, apply the damage to your pet's hit points.
+                        However, since you have trained your pet for battle, it adds your Proficiency Bonus to its AC. It may also have more hit points than a normal member of its species.
+                    </p>
+                </li>
+                <li>
+                    <p><b>What happens if my companion dies?</b></p>
+                    <p>You must spend 8 hours magically bonding with another beast to make it your new companion.</p>
+                </li>
+            </ol>
+        </section>
+    </article>
+    <h2><span id="rules-expand" class="expandomatic">+ </span>Rules</h2>
+    <article id="rules-article" class="collapsed-article">
+        <section>
+            <h3>Ranger's Companion</h3>
+            <p>
+                At 3<sup>rd</sup> level, you gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower. Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals the hit point number in its stat block or four times your ranger level, whichever is higher. Like any creature, it can spend Hit Dice during a short rest to regain hit points.
+            </p>
+            <p> 
+                The beast obeys your commands as best as it can. It takes its turn on your initiative. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, or Help action. If you don't issue a command, the beast takes the Dodge action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action.
+            </p>
+            <p>
+                If you are incapacitated or absent, the beast acts on its own, focusing on protecting you and itself. The beast never requires your command to use its reaction, such as when making an opportunity attack.
+            </p>
+            <p>
+                While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.
+            </p>
+            <p>
+                If the beast dies, you can obtain a new companion by spending 8 hours magically bonding with a beast that isn’t hostile to you and that meets the requirements.
+            </p>
+        </section>
+    </article>
+    <h2><span id="stats-expand" class="expandomatic">+ </span>Generic Stats</h2>
+    <article id="stats-article" class="collapsed-article">
+        <section>
+            <table>
+                <caption><h3>Wolf</h3></caption>
+                <tr><td colspan="3"><i>Medium Beast, Unaligned</i></td></tr>
+                <tr><th>Armor Class</th><td>13</td><td><i>(natural armor)</i></td></tr>
+                <tr><th>Hit Points</th><td>11</td><td><i>(2d8+2)</i></td></tr>
+                <tr><th>Speed</th><td colspan="2">40 ft.</td></tr>
+            </table>
+            <hr>
+            <table>
+                <tr><th>STR</th><td>12</td><td><i>(+1)</i></td></tr>
+                <tr><th>DEX</th><td>15</td><td><i>(+2)</i></td></tr>
+                <tr><th>CON</th><td>12</td><td><i>(+1)</i></td></tr>
+                <tr><th>INT</th><td>3</td><td><i>(-4)</i></td></tr>
+                <tr><th>WIS</th><td>12</td><td><i>(+1)</i></td></tr>
+                <tr><th>CHA</th><td>6</td><td><i>(-2)</i></td></tr>
+            </table>
+            <hr>
+            <table>
+                <tr><th>Skills</th><td>Perception +3, Stealth +4</td></tr>
+                <tr><th>Senses</th><td>Passive Perception 13</td></tr>
+                <tr><th>Languages</th><td>--</td></tr>
+                <tr><th>Challenge</th><td>1/4 <i>(50 XP)</i></td></tr>
+                <tr><th>Proficiency Bonus</th><td>+2</td></tr>
+
+                <tr><th>Keen Hearing and Smell.</th><td>The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.</td></tr>
+                <tr><th>Pack Tactics.</th><td>The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated.</td></tr>
+            </table>
+            <h4>Actions</h4>
+            <p><u>Bite.</u> <i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one target. Hit: 7 (2d4+2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.</p>    
+        </section>
+    </article>
+</body>
+<footer>
+    <script>
+        const LOCALSTORAGE_KEYNAME = "ranger-beast-master-sheet";
+
+        var compExpand = document.getElementById("companion-expand");
+        var rulesExpand = document.getElementById("rules-expand");
+        var statsExpand = document.getElementById("stats-expand");
+        var faqExpand = document.getElementById("faq-expand");
+        var currHP = document.getElementById("pet-current-hit-points");
+        var maxHP = document.getElementById("pet-max-hit-points");
+        var petAC = document.getElementById("pet-armor-class");
+        var petAttack = document.getElementById("pet-attack");
+        var petDamage = document.getElementById("pet-damage");
+        var pageState = {
+                currentHitPoints: 12,
+                maxHitPoints: 12,
+                AC: 15,
+                attack: "+6 Bite",
+                damage: "9 (2d4+4) piercing"
+            };  
+
+        if (window.localStorage) {
+            var savedState = window.localStorage.getItem(LOCALSTORAGE_KEYNAME);
+            if (savedState) {
+                try {
+                    pageState = JSON.parse(savedState);
+                } catch {
+                    pageState = {
+                        currentHitPoints: 0,
+                        maxHitPoints: 0,
+                        AC: 0,
+                        attack: "",
+                        damage: ""
+                    };
+                }
+            }
+        }
+        maxHP.value = pageState.maxHitPoints;
+        currHP.value = pageState.currentHitPoints;
+        currHP.max = pageState.maxHitPoints;
+        currHP.min = pageState.maxHitPoints * -1;
+        petAC.value = pageState.AC;
+        petAttack.value = pageState.attack;
+        petDamage.value = pageState.damage;
+        updatePageState();
+
+        compExpand.addEventListener("click", ev => {
+            let expandArticle = document.getElementById("companion-article");
+            clickExpander(compExpand, expandArticle);
+        });
+        rulesExpand.addEventListener("click", ev => {
+            let expandArticle = document.getElementById("rules-article");
+            clickExpander(rulesExpand, expandArticle);
+        });
+        statsExpand.addEventListener("click", ev => {
+            let expandArticle = document.getElementById("stats-article");
+            clickExpander(statsExpand, expandArticle);
+        });
+        faqExpand.addEventListener("click", ev => {
+            let expandArticle = document.getElementById("faq-article");
+            clickExpander(faqExpand, expandArticle);
+        });
+        currHP.addEventListener("change", ev => {
+            if (pageState.currentHitPoints != currHP.value) {
+                updatePageState();
+            }
+        });
+        maxHP.addEventListener("change", ev => {
+            if (pageState.maxHitPoints != maxHP.value) {
+                currHP.max = maxHP.value;
+                currHP.min = maxHP.value * -1;
+                updatePageState();
+            }
+        });
+        petAC.addEventListener("change", ev => {
+            if (pageState.AC != petAC.value) {
+                updatePageState();
+            }
+        });
+        petAttack.addEventListener("change", ev => {
+            if (pageState.attack != petAttack.value) {
+                updatePageState();
+            }
+        });
+        petDamage.addEventListener("change", ev => {
+            if (pageState.damage != petDamage.value) {
+                updatePageState();
+            }
+        });
+
+        function clickExpander(clicker, art) {
+            if (clicker.textContent == "+ ") {
+                art.className = "expanded-article";
+                clicker.textContent = "- ";
+            } else {
+                art.className = "collapsed-article";
+                clicker.textContent = "+ ";
+            }
+        }
+        function updatePageState() {
+            if (window.localStorage) {
+                pageState.currentHitPoints = currHP.value;
+                pageState.maxHitPoints = maxHP.value;
+                pageState.AC = petAC.value;
+                pageState.attack = petAttack.value;
+                pageState.damage = petDamage.value;
+                window.localStorage.setItem(LOCALSTORAGE_KEYNAME, JSON.stringify(pageState));
+            }
+        }
+    </script>
+</footer>
+</html>
